@@ -1,0 +1,73 @@
+body, html {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  background-color: gray;
+}
+
+#image {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  z-index: -1;
+}
+
+#quote-box {
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+  max-width: 50%;
+  height: 100%;
+  margin: 25% auto;
+  list-style-type: none;
+  border-radius: 2%;
+  font-family: 'Open Sans';
+  line-height: 2.8em;
+  transition: 1.5s ease-in-out;
+}
+
+#quotesInfo {
+  margin: 3em;
+}
+
+#text {
+  justify-self: center;
+  text-align: stretch;
+  width: 100%;
+  height: 100%;
+  font-size: 2em;
+}
+
+#author {
+  padding: 0 2em;
+  float: right;
+  font-size: 1.7em;
+}
+
+.buttons {
+  padding: 0%;
+  margin: 0 8% 10% 8%;
+}
+#new-quote {
+  cursor: pointer;
+  background-color: white;
+  width: 7em;
+  height: 4em;
+  float: left;
+  font-weight: 800;
+  font-size: 1.5em;
+  border-radius: 5%;
+}
+
+#tweet-quote {
+  float: right;
+  width: auto;
+  color: white;
+}
+
+@media screen and (min-width: 1700px) {
+  #quote-box {
+    width: 30%;
+  }
+}
