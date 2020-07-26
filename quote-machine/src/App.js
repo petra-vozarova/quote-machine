@@ -7,7 +7,7 @@ import $ from 'jquery'
 
 function App() {
   return (
-    <div id='conatiner'>
+    <div id='container'>
       <div id='image'></div>
         <div id='quote-box'>
           <div id='quotesInfo'>
