@@ -7,22 +7,22 @@ import $ from 'jquery'
 
 function App() {
   return (
-<div id='image'>
-  <div id='quote-box'>
-    <div id='quotesInfo'>
-      <p id='text'></p>
-      <p id='author'></p>
-    
-    <div class='buttons'>
-      <button id='new-quote'><em>New Quote</em></button>
-
-      <a id='tweet-quote' href="https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=" target='_blank'>
-        <li><span><i class='fa fa-twitter fa-3x'></i></span></li>
-      </a>
+    <div id='conatiner'>
+      <div id='image'></div>
+        <div id='quote-box'>
+          <div id='quotesInfo'>
+            <p id='text'></p>
+            <p id='author'></p>
+            <div class='buttons'>
+              <button id='new-quote'><em>New Quote</em></button>
+              <a id='tweet-quote' href="https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=" target='_blank'>
+              <li><span><i class='fa fa-twitter fa-3x'></i></span></li>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
+   
   );
 }
 
@@ -67,16 +67,16 @@ let backImages = [
 "https://images.unsplash.com/photo-1504807417934-b7fdec306bfd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1105&q=80",
 ];
 
-var im = "./bristolBalloons.jpg";
+var im = "./quote-machine/src/bristolBalloons.jpg";
 var usedIndex = [];
 function setImage() {
   let randomIndex = Math.floor(Math.random() * backImages.length);
   let randomImage = backImages[randomIndex];
   $("#image").animate({ opacity: 0 }, 25, function () {
-    $("#image").css("background-image", "url("+randomImage+")");
+    $("#image").css("background-image", "url(\""+randomImage+"\")");
     $("#image").css("background-repeat", "no-repeat");
     $("#image").css("background-size", "cover");
-    $(this).animate({ opacity: 0.9 });
+    $(this).animate({ opacity: 1 });
   });
 }
 
@@ -105,7 +105,7 @@ function setQuote() {
   let author = newQuote.author;
 
   $("#quote-box").animate({ opacity: 0 }, 400, function () {
-    $(this).animate({ opacity: 0.9 }, 400);
+    $(this).animate({ opacity: 0.8 }, 400);
     $("#text").text(quote);
     $("#author").html("<p><em>" + author + "</em></p>");
   });

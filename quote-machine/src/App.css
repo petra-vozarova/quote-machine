@@ -2,68 +2,74 @@ body, html {
   width: 100%;
   min-height: 100%;
   margin: 0;
-
+text-align: center;
  /* background-image: url("./bristolBalloons.jpg");*/
+ background-color: #C0C0C0;
 }
 
 #image {
-  position: absolute;
+  display: block;
+  position: fixed;
   width: 100%;
-  margin: 0;
+  max-width:100%;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: -1;
-  object-position: top center;
-  height: 100%;
-  max-height: 100vh;
-  max-width: 100vw;
-  object-fit: cover;
+  object-position: bottom;
+  height:100%;
+  background-size: cover;
+  /*background-image: url('./bristolBalloons.jpg')*/
 }
 
 #quote-box {
-  background-color: gray;
+  background-color: #979696;
+  opacity: 0.7;
   width: 50%;
-  height: 70%;
-  max-height: 70%;
-  min-height: 70%;
+  height: 80%;
+  max-height: 90%;
+  min-height: 50%;
   list-style-type: none;
   border-radius: 2%;
   font-family: 'Open Sans';
-  line-height: 2.8em;
   transition: .2s ease-in-out;
   position: fixed;
   left: 50%;
-  top: 20%;
+  top: 10%;
   transform: translateX(-50%);
   text-align: center;
 
 }
 
 #quotesInfo {
-  max-height:100%;
-  height:100%;
-  min-height:100%;
+  max-height:75%;
+  height:75%;
   margin:0 1em;
+ /* background-color: red;*/
+
+
 }
 
 #text {
   width: 100%;
-  max-height: 50%;
-  height: auto;
-  font-size: min(max(40px), 50px);
+  max-height: 65%;
+  font-size: auto;
   text-align: center;
- margin-top: 20%;
+ margin-top: 5%;
+ font-weight: 600;
+ /*background-color: yellow;*/
 }
 
 #author {
-  justify-self: end;
-  float: right;
-  font-size: min(max(35px), 45px);
-  margin-right: 0.5em;
-  margin-top: 0;
-  padding-top: 0.5em;
+  font-size: auto;
+  width:50%;
+  /*background-color: blue;*/
+  font-size:auto;
+  font-weight:600;
+  float:right;
 }
 
 .buttons {
-  margin: 0;
+  margin: 1em;
 }
 
 #new-quote {
@@ -72,7 +78,7 @@ body, html {
   width: 7em;
   height: 4em;
   font-weight: 800;
-  font-size: 1.3em;
+  font-size: 1em;
   border-radius: 5%;
   position: fixed;
   bottom: 0.8em;  
@@ -80,17 +86,25 @@ body, html {
 }
 
 #tweet-quote {
-  float: right;
+  float: left;
   width: auto;
-  color: white;
+  color: red;
+  cursor: pointer;
+  bottom: 0;
+  height:10em;
 }
 
 @media screen and (min-width: 1700px) {
+  #image{
+    min-width:55vw;
+    width: auto;
+  }
   #quote-box {
     width: 35%;
     height: 60%;
     max-height: 60%;
     min-height: 60%;
+    top:25%;
   }
 }
 
