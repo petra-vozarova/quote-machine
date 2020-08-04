@@ -17,7 +17,7 @@ Upon pressing this button, the app fetches a new quote from the remote database.
 It performs a random operation to select a quote from the database. It extracts the name of the author and displays them to a user.
 Pressing this button also sets a new background image. The image is randomly selecting from the local list of images and accessed via url path.
 
-### Tweeter Button
+### Twitter Button
 This function allows the user to re-tweet the current quote.
 
 ### Responsive Web Design
